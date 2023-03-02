@@ -23,7 +23,7 @@ let edad = parseInt(prompt("Ingrese su edad"));
 console.log(typeof edad);
 console.log(edad);
 
-// isNaN(edad)
+// Buscar funcion isNaN(edad)
 
 if(edad >= 0 && edad <= 130){
 if ((edad >= 16 && edad < 18) || edad >= 71) {
