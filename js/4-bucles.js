@@ -8,10 +8,11 @@ document.write("<h1>Este es un bucle while</h1>")
 let contador = 2;
 while (contador <= 10) {
     document.write(`<p>Este es el renglon N${contador}</p>`);
-    // contador++ // contador = contador + 1;
-    contador = contador + 2;
+    // contador++; // contador = contador + 1;
+    contador += 2; // contador = contador + 2;
 }
 
+//* do while con boton de confirmar para repetir codigo
 // do while
 /* do{
     todo el codigo a repetir
@@ -35,5 +36,10 @@ do{
     vueltas++;
 }while(vueltas < limite)
 
+document.write("<h2>Este es un bucle for</h2>")
 
 // for
+// for(Inicializar variable; condicion logica; incremento de variable)
+for(let contador = 10; contador > 0; contador--){
+    document.write(`<p>Cuenta regresiva, ${contador}</p>`)
+}
