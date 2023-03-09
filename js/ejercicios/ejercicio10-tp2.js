@@ -5,7 +5,7 @@ const columnas = prompt("ingrese el numero de columnas");
 let numeracion = filas * columnas
 console.log(filas)
 
-document.write("<table> <tbody>");
+document.write(`<table><tbody>`);
 //* dibuja las filas
 for(let indiceFilas = 0; indiceFilas < filas; indiceFilas++){
     document.write("<tr>")
