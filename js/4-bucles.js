@@ -36,4 +36,10 @@ do{
 }while(vueltas < limite)
 
 
+document.write("<h2>Este es un bucle for</h2>")
+
 // for
+// for(Inicializar variable; condicion logica; incremento de variable)
+for(let contador = 10; contador > 0; contador--){
+    document.write(`<p>Cuenta regresiva, ${contador}</p>`)
+}
