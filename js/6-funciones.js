@@ -7,8 +7,22 @@ function saludar() {
 }
 
 function saludoPersonaje(nombre, apellido, alias) {
-    document.write(`<p>Hola mi nombre es ${nombre} ${apellido}, me conocen como ${alias}</p>`)
+    let otroNombre = nombreCompleto(nombre, apellido);
+    document.write(`<p>Hola mi nombre es ${nombreCompleto(nombre, apellido)}, me conocen como ${alias}</p>`)
 }
+
+//! function nombreCompleto(nombre, apellido) {
+//!     const nuevoNombre = nombre+', ' +apellido;
+//!     return nuevoNombre;
+//! }
+
+//* Funciones anonimas o expresivas
+//* Se declaran al principio del codigo
+const nombreCompleto  = function (nombre, apellido) {
+    const nuevoNombre = nombre+' ' +apellido;
+    return nuevoNombre;
+}
+
 
 
 //* para que funcione tengo que llamar o invocar a la funcion
@@ -26,8 +40,9 @@ saludoPersonaje(nombre, apellido, heroe);
 
 nombre = 'Tony';
 apellido = 'Stark';
-heroe = 'Ironman';
+heroe = 'Iron-Man';
 
 saludoPersonaje(nombre,apellido,heroe);
 
-//* Funciones anonimas o expresivas
+let otroNombre = nombreCompleto(nombre, apellido)
+console.log(otroNombre)
