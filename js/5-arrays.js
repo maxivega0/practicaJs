@@ -70,11 +70,46 @@ for (let i = 0; i < peliculas.length; i++) {
 document.write(`</ul>`);
 
 //* Borrar varios elementos
-peliculas.splice(5)
+//* Desde la quinta posicion, borra los siguentes 2 elementos
+peliculas.splice(5,2)
 
-document.write(`<h2>Eliminamos todos los elementos desde la posicion 5 del array peliculas.</h2>`);
+document.write(`<h2>Eliminamos elementos de la posicion 5 y 6 del array peliculas.</h2>`);
 document.write(`<ul>`);
 for (let i = 0; i < peliculas.length; i++) {
     document.write(`<li>${peliculas[i]}</li>`);
 }
 document.write(`</ul>`);
+
+//* Borrar un elemento al principio del array
+peliculas.shift();
+
+document.write(`<h2>Eliminamos el primer elemento del array peliculas.</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+    document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
+//* Operaciones especiales para arrays
+//* Ordenar el array (en string va perfecto)
+peliculas.sort();
+
+document.write(`<h2>Ordenamos el array peliculas.</h2>`);
+document.write(`<ul>`);
+for (let i = 0; i < peliculas.length; i++) {
+    document.write(`<li>${peliculas[i]}</li>`);
+}
+document.write(`</ul>`);
+
+//* saber si existe o no un elemento dentro del array
+
+document.write(`<p>¿Existe la peli Thor? ${peliculas.includes('Thor')}</p>`);
+document.write(`<p>¿Existe la peli thor love and thunder? ${peliculas.includes('thor')}</p>`);
+
+//* Operador ternario
+//* (condicion logica) ? true : false  // reemplzado de estructura ifelse.
+//* Si agregamos "Null" luego de ':', podemos usar la estructura ternaria para solo if  
+let existePeli = (peliculas.includes('Thor')) ? 'Si encontré la pelicula.' : 'No encontramos la pelicula buscada.';
+
+document.write(`<p>¿Existe la peli Thor? ${existePeli}</p>`);
+document.write(`<p>¿Existe la peli thor love and thunder? ${(peliculas.includes('thor')) ? 'Si encontré la pelicula.' : 'No encontramos la pelicula buscada.'}</p>`);
