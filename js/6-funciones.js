@@ -18,12 +18,21 @@ function saludoPersonaje(nombre, apellido, alias) {
 
 //* Funciones anonimas o expresivas
 //* Se declaran al principio del codigo
-const nombreCompleto  = function (nombre, apellido) {
-    const nuevoNombre = nombre+' ' +apellido;
-    return nuevoNombre;
-}
+//* const nombreCompleto  = function (nombre, apellido) {
+//*     const nuevoNombre = nombre+' ' +apellido;
+//*     return nuevoNombre;
+//*}
+//TODO const nombreCompleto = function (nombre, apellido){
+//TODO     return nombre+' ' +apellido;
+//TODO }
 
-
+//* Arrow function
+//* Si tengo un solo parametro, puedo omitir los parentesis
+//! const nombreCompleto = (nombre, apellido) => {
+//!     return nombre+' ' +apellido;
+//! }
+//* Forma resumida arrowfunction
+const nombreCompleto = (nombre, apellido) => nombre + ' ' + apellido;
 
 //* para que funcione tengo que llamar o invocar a la funcion
 saludar();
