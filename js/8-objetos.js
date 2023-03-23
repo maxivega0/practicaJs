@@ -13,10 +13,14 @@ let cancion = {
 
     //* Metodos
     reproducir: function(){
-        document.write(`<p>La cancion se está reproduciendo...</p>`)
+        //* Como nombrar un atributo dentro del objeto(buena practica)
+        console.log(this)
+        document.write(`<p>La cancion ${this.titulo} se está reproduciendo...</p>`)
     },
-    pausa:() => {
-        document.write(`<p>La cancion se está pausa.</p>`)
+    //! No puedo usar 'this' en arrow function
+    pausa: () => {
+        console.log(this.titulo)
+        document.write(`<p>La cancion está pausa.</p>`)
     }
 }
 
@@ -25,3 +29,22 @@ console.log(cancion);
 document.write(`<p>Cancion: ${cancion.titulo} </p>`);
 document.write(`<p>Genero: ${cancion.genero} </p>`);
 document.write(`<p>Duracion: ${cancion['duracion']} </p>`);
+
+//* Modificar una propiedad
+document.write(`<p>Artista: ${cancion.artista} </p>`);
+cancion.artista = 'La Mosca Tse-Tse';
+document.write(`<p>Artista: ${cancion.artista} </p>`);
+
+//*  Agregar una propiedad
+cancion.premios = 'Disco de Oro';
+document.write(`<p>Premios: ${cancion.premios} </p>`);
+
+//* Borrar una propiedad
+delete cancion.premios
+console.log(cancion)
+document.write(`<p>Premios: ${cancion.premios} </p>`);
+
+//* Ejecutar un metodo cancion.reproducir(parametros si los hay)
+cancion.reproducir();
+cancion.pausa();
+console.log(this)
