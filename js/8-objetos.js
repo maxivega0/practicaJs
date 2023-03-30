@@ -48,3 +48,4 @@ document.write(`<p>Premios: ${cancion.premios} </p>`);
 cancion.reproducir();
 cancion.pausa();
 console.log(this)
+
